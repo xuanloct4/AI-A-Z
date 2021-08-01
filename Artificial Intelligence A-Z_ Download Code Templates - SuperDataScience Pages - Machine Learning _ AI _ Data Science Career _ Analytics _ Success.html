@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://www.superdatascience.com/pages/artificial-intelligence -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:var(--litepicker-month-header-color)}.litepicker .container__months .month-item-header div{-webkit-box-flex:1;-ms-flex:1;flex:1}.litepicker .container__months .month-item-header div>.month-item-name{margin-right:5px}.litepicker .container__months .month-item-header div>.month-item-year{padding:0}.litepicker .container__months .month-item-header .reset-button{color:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button>svg{fill:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button *{pointer-events:none}.litepicker .container__months .month-item-header .reset-button:hover{color:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .reset-button:hover>svg{fill:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .button-previous-month,.litepicker .container__months .month-item-header .button-next-month{visibility:hidden;text-decoration:none;padding:3px 5px;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__months .month-item-header .button-previous-month *,.litepicker .container__months .month-item-header .button-next-month *{pointer-events:none}.litepicker .container__months .month-item-header .button-previous-month{color:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month>svg,.litepicker .container__months .month-item-header .button-previous-month>img{fill:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month:hover{color:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-previous-month:hover>svg{fill:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month{color:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month>svg,.litepicker .container__months .month-item-header .button-next-month>img{fill:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month:hover{color:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month:hover>svg{fill:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-weekdays-row{display:-webkit-box;display:-ms-flexbox;display:flex;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;color:var(--litepicker-month-weekday-color)}.litepicker .container__months .month-item-weekdays-row>div{padding:5px 0;font-size:85%;-webkit-box-flex:1;-ms-flex:1;flex:1;width:var(--litepicker-day-width);text-align:center}.litepicker .container__months .month-item:first-child .button-previous-month{visibility:visible}.litepicker .container__months .month-item:last-child .button-next-month{visibility:visible}.litepicker .container__months .month-item.no-previous-month .button-previous-month{visibility:hidden}.litepicker .container__months .month-item.no-next-month .button-next-month{visibility:hidden}.litepicker .container__days{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:center;-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__days>div,.litepicker .container__days>a{padding:5px 0;width:var(--litepicker-day-width)}.litepicker .container__days .day-item{color:var(--litepicker-day-color);text-align:center;text-decoration:none;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__days .day-item:hover{color:var(--litepicker-day-color-hover);-webkit-box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover);box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover)}.litepicker .container__days .day-item.is-today{color:var(--litepicker-is-today-color)}.litepicker .container__days .day-item.is-locked{color:var(--litepicker-is-locked-color)}.litepicker .container__days .day-item.is-locked:hover{color:var(--litepicker-is-locked-color);-webkit-box-shadow:none;box-shadow:none;cursor:default}.litepicker .container__days .day-item.is-in-range{background-color:var(--litepicker-is-in-range-color);border-radius:0}.litepicker .container__days .day-item.is-start-date{color:var(--litepicker-is-start-color);background-color:var(--litepicker-is-start-color-bg);border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-flipped{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date{color:var(--litepicker-is-end-color);background-color:var(--litepicker-is-end-color-bg);border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date.is-flipped{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-end-date{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-highlighted{color:var(--litepicker-highlighted-day-color);background-color:var(--litepicker-highlighted-day-color-bg)}.litepicker .container__days .week-number{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--litepicker-month-week-number-color);font-size:85%}.litepicker .container__footer{text-align:right;padding:10px 5px;margin:0 5px;background-color:var(--litepicker-footer-color-bg);-webkit-box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.litepicker .container__footer .preview-date-range{margin-right:10px;font-size:90%}.litepicker .container__footer .button-cancel{background-color:var(--litepicker-button-cancel-color-bg);color:var(--litepicker-button-cancel-color);border:0;padding:3px 7px 4px;border-radius:3px}.litepicker .container__footer .button-cancel *{pointer-events:none}.litepicker .container__footer .button-apply{background-color:var(--litepicker-button-apply-color-bg);color:var(--litepicker-button-apply-color);border:0;padding:3px 7px 4px;border-radius:3px;margin-left:10px;margin-right:10px}.litepicker .container__footer .button-apply:disabled{opacity:0.7}.litepicker .container__footer .button-apply *{pointer-events:none}.litepicker .container__tooltip{position:absolute;margin-top:-4px;padding:4px 8px;border-radius:4px;background-color:var(--litepicker-tooltip-color-bg);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);white-space:nowrap;font-size:11px;pointer-events:none;visibility:hidden}.litepicker .container__tooltip:before{position:absolute;bottom:-5px;left:calc(50% - 5px);border-top:5px solid rgba(0,0,0,0.12);border-right:5px solid transparent;border-left:5px solid transparent;content:""}.litepicker .container__tooltip:after{position:absolute;bottom:-4px;left:calc(50% - 4px);border-top:4px solid var(--litepicker-tooltip-color-bg);border-right:4px solid transparent;border-left:4px solid transparent;content:""}
+</style>
+  <link rel="stylesheet" type="text/css" class="__meteor-css__" href="./Artificial Intelligence A-Z_ Download Code Templates - SuperDataScience Pages - Machine Learning _ AI _ Data Science Career _ Analytics _ Success_files/5fb3686d6e00375728e244c62e0c190b25526c84.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#228ae6">
+
+	<link rel="shortcut icon" type="image/png" href="https://www.superdatascience.com/favicon.png">
+	<link rel="apple-touch-icon" href="https://www.superdatascience.com/apple-touch-icon-precomposed.png">
+	<link rel="manifest" href="https://www.superdatascience.com/manifest.json">
+
+	<title>Artificial Intelligence A-Z: Download Code Templates - SuperDataScience Pages - Machine Learning | AI | Data Science Career | Analytics | Success</title>
+	<script async="" src="./Artificial Intelligence A-Z_ Download Code Templates - SuperDataScience Pages - Machine Learning _ AI _ Data Science Career _ Analytics _ Success_files/gtm.js"></script><script type="text/javascript" async="" src="./Artificial Intelligence A-Z_ Download Code Templates - SuperDataScience Pages - Machine Learning _ AI _ Data Science Career _ Analytics _ Success_files/analytics.min.js"></script><script> window.prerenderReady = false; </script> <!-- Tells pre-render not to cache yet. -->
+
+	<!-- Google Tag Manager -->
+	<script type="text/javascript" data-cookiecategory="targeting">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KQQW644');</script>
+
+	<!-- Segment Tracking -->
+	<script>!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.13.1";analytics.load("kTzvFMJQI69rlqzdptxXDvueu4k79bWR");}}(); </script>
+
+	<link href="./Artificial Intelligence A-Z_ Download Code Templates - SuperDataScience Pages - Machine Learning _ AI _ Data Science Career _ Analytics _ Success_files/icon" rel="stylesheet">
+
+	<!-- JWPlayer Script -->
+	<script src="./Artificial Intelligence A-Z_ Download Code Templates - SuperDataScience Pages - Machine Learning _ AI _ Data Science Career _ Analytics _ Success_files/E37GvLkJ.js" async="async"></script>
+
+	<!-- OptinMonster Script -->
+	<script type="text/javascript" data-cookiecategory="functionality" src="./Artificial Intelligence A-Z_ Download Code Templates - SuperDataScience Pages - Machine Learning _ AI _ Data Science Career _ Analytics _ Success_files/api.min.js" data-account="51992" data-user="45908" async=""></script>
+
+	<!-- Cookie Script -->
+	<script type="text/javascript" charset="UTF-8" src="./Artificial Intelligence A-Z_ Download Code Templates - SuperDataScience Pages - Machine Learning _ AI _ Data Science Career _ Analytics _ Success_files/07a10c13bde49c13377e33a3c50fa67b.js"></script>
+
+<style type="text/css">.auth-terms{position:absolute;bottom:30px;right:30px;color:#fff}.auth-terms a{color:hsla(0,0%,100%,.5);font-size:15px;margin:0 8px;text-decoration:none;transition:color .2s ease-in-out}.auth-terms a:last-child{margin-right:0}.auth-terms a:hover{color:#fff}</style><style type="text/css">.modal-card{animation:fade-up .5s ease;background-color:#fff;border-color:rgba(0,0,0,.5);border-radius:4px;box-shadow:2px 2px 10px rgba(0,0,0,.3);font-family:Roboto,sans-serif;margin:60px auto;max-width:520px;min-width:320px;outline:none!important;overflow:auto;padding:15px;position:relative;width:100%}.modal-close{border:none;background-color:transparent;cursor:pointer;outline:none;position:absolute;right:10px;top:10px}.modal-close svg{color:#c4ced3;width:15px}.modal-close svg:hover{color:#5f6c80}.modal-card h2{margin-top:0}.modal-card label{display:block;font-weight:500;margin-bottom:10px}.modal-card label input:not([type=checkbox]),.modal-card label textarea{display:block;width:100%;padding:0 5px}.modal-card label input[type=checkbox]{margin-right:5px;vertical-align:top}</style><style type="text/css">.contenteditable-container{display:block;max-width:100%}.contenteditable-editor{display:block;width:100%;border:1px dashed #aaa;min-height:100px;margin-bottom:10px;outline:none;padding:5px;cursor:text;word-break:break-word}.contenteditable-editor:focus{border-color:#333}.contenteditable-editor:empty:before{color:#757575;content:attr(placeholder);display:block;font-size:14px;font-weight:400}.contenteditable-editor img{max-width:100%}.contenteditable-actions{margin-bottom:10px;margin-top:5px}.contenteditable-actions span{display:inline-block;background-color:#d3d3d3;margin:0 3px 3px 0;font-size:13px;cursor:pointer;width:28px;text-align:center}.contenteditable-actions span svg{height:25px;vertical-align:top;padding:5px}.contenteditable-source{display:block;width:100%;max-width:100%;border:1px dashed #aaa;min-height:100px;margin-bottom:10px;outline:none}.contenteditable-source:focus{border-color:#333}</style><meta name="description" content="Welcome to the data repository for the Artificial Intelligence course by Hadelin de Ponteves and Kirill Eremenko. The datasets and other supplementary materials are below. Enjoy!" dochead="1"><meta property="og:title" content="Artificial Intelligence A-Z: Download Code Templates - SuperDataScience Pages - Machine Learning | AI | Data Science Career | Analytics | Success" dochead="1"><meta property="og:type" content="article" dochead="1"><meta property="og:description" content="Welcome to the data repository for the Artificial Intelligence course by Hadelin de Ponteves and Kirill Eremenko. The datasets and other supplementary materials are below. Enjoy!" dochead="1"><meta property="og:url" content="https://www.superdatascience.com/pages/artificial-intelligence" dochead="1"><meta property="og:locale" content="en_US" dochead="1"><meta property="og:site_name" content="SuperDataScience" dochead="1"><meta property="twitter:title" content="Artificial Intelligence A-Z: Download Code Templates - SuperDataScience Pages - Machine Learning | AI | Data Science Career | Analytics | Success" dochead="1"><meta property="twitter:site" content="@superdatasci" dochead="1"><meta property="twitter:creator" content="@superdatasci" dochead="1"><meta property="twitter:description" content="Welcome to the data repository for the Artificial Intelligence course by Hadelin de Ponteves and Kirill Eremenko. The datasets and other supplementary materials are below. Enjoy!" dochead="1"></head>
+<body data-new-gr-c-s-check-loaded="14.1022.0" data-gr-ext-installed="">
+  <script type="text/javascript">__meteor_runtime_config__ = JSON.parse(decodeURIComponent("%7B%22meteorRelease%22%3A%22METEOR%401.10.2%22%2C%22gitCommitHash%22%3A%2256cfa410a66991a269fbe27221581d05f3a9b10e%22%2C%22meteorEnv%22%3A%7B%22NODE_ENV%22%3A%22production%22%2C%22TEST_METADATA%22%3A%22%7B%7D%22%7D%2C%22PUBLIC_SETTINGS%22%3A%7B%22promotionalCodes%22%3A%5B%7B%22code%22%3A%22datarockstar%22%2C%22roles%22%3A%5B%22book_cds%22%5D%7D%5D%2C%22platformRoles%22%3A%5B%7B%22role%22%3A%22guest%22%2C%22name%22%3A%22Free%22%7D%2C%7B%22role%22%3A%22payer%22%2C%22name%22%3A%22Payers%22%7D%2C%7B%22role%22%3A%22admin%22%2C%22name%22%3A%22Administrators%22%7D%2C%7B%22role%22%3A%22book_cds%22%2C%22name%22%3A%22Book%20CDS%22%7D%2C%7B%22role%22%3A%22mashable_bundle_1%22%2C%22name%22%3A%22Mashable%20Bundle%201%22%7D%5D%7D%2C%22ROOT_URL%22%3A%22https%3A%2F%2Fwww.superdatascience.com%22%2C%22ROOT_URL_PATH_PREFIX%22%3A%22%22%2C%22autoupdate%22%3A%7B%22versions%22%3A%7B%22web.browser%22%3A%7B%22version%22%3A%223f0d9257cd509b0399b62de5e30b30facb024396%22%2C%22versionRefreshable%22%3A%22aff1863a69c531fd1f6f81fa731a6faf5425ec79%22%2C%22versionNonRefreshable%22%3A%223ce6086a8d84ab44867be09c7ed0f45e00b4874f%22%7D%2C%22web.browser.legacy%22%3A%7B%22version%22%3A%227e1888821886d7eadd411c52f4a28b5193bdb8f3%22%2C%22versionRefreshable%22%3A%22aff1863a69c531fd1f6f81fa731a6faf5425ec79%22%2C%22versionNonRefreshable%22%3A%2297431935b65ca44a0eca124fbfbb3bb9255c90bd%22%7D%7D%2C%22autoupdateVersion%22%3Anull%2C%22autoupdateVersionRefreshable%22%3Anull%2C%22autoupdateVersionCordova%22%3Anull%2C%22appId%22%3A%22not499zhpyxm.zvlnxu93xyus%22%7D%2C%22appId%22%3A%22not499zhpyxm.zvlnxu93xyus%22%2C%22isModern%22%3Atrue%7D"))</script>
+
+  <script type="text/javascript" src="./Artificial Intelligence A-Z_ Download Code Templates - SuperDataScience Pages - Machine Learning _ AI _ Data Science Career _ Analytics _ Success_files/ffab451f83cf3cb19593c258ac5d3a97f7ef4294.js"></script>
+
+
+
+<div id="h10-xray"></div><div id="h10-asin-grabber"></div><div id="h10-demand"></div><div id="h10-inventory"></div><div id="h10-profitability-calculator"></div><div id="h10-review"></div><div id="__blaze-root">
+		<nav class="main-navbar">
+		<div class="all-articles-container">
+			<div class="hidden-xs">
+				<a href="https://www.superdatascience.com/home">
+					<img src="./Artificial Intelligence A-Z_ Download Code Templates - SuperDataScience Pages - Machine Learning _ AI _ Data Science Career _ Analytics _ Success_files/Logo.svg" alt="SDS Logo">
+				</a>
+
+				<div class="search-bar hidden-sm">
+					<input type="text" id="search-bar-input" placeholder="Search...">
+					<label for="search-bar-input">
+						
+							<i class="material-icons search-state search">search</i>
+						
+					</label>
+				</div>
+
+				<div class="menu-section">
+					
+						<div class="menu-option">
+							<a href="https://www.superdatascience.com/paths" class="name">Learning Paths</a>
+						</div>
+					
+						<div class="menu-option">
+							<a href="https://www.superdatascience.com/courses" class="name">Courses</a>
+						</div>
+					
+						<div class="menu-option">
+							<a href="https://www.superdatascience.com/podcast" class="name">Podcasts</a>
+						</div>
+					
+						<div class="menu-option">
+							<a href="https://www.superdatascience.com/blogs" class="name">Blogs</a>
+						</div>
+					
+						<div class="menu-option">
+							<a href="https://www.superdatascience.com/workshops" class="name">Workshops</a>
+						</div>
+					
+
+					<div class="menu-option">
+						<div class="separator"></div>
+					</div>
+					<div class="menu-option profile-option">
+						<div class="thumbnail-container profile-image"><i class="material-icons">person</i> </div>
+
+						<div class="popup-menu">
+							
+		<div class="popup-header">
+			<a href="https://www.superdatascience.com/profile/jnbaP4hc9Hfqs8StA">
+				<div class="thumbnail-container profile-image"><i class="material-icons">person</i> </div>
+				<div class="information">
+					<div class="data">
+						<h4>Tran Loc</h4>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		
+			
+		
+			
+				<a href="https://www.superdatascience.com/profile/jnbaP4hc9Hfqs8StA">Profile</a>
+			
+		
+			
+				<a href="https://www.superdatascience.com/pricing">Upgrade Account</a>
+			
+		
+			
+				<a href="https://www.superdatascience.com/profile-settings">Account Settings</a>
+			
+		
+			
+				<a>Support</a>
+			
+		
+
+		<div class="popup-footer">
+			<a href="https://www.superdatascience.com/pages/artificial-intelligence" class="logout"><i class="material-icons">exit_to_app</i> Logout</a>
+		</div>
+	
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="visible-xs">
+				<a href="https://www.superdatascience.com/home">
+					<img src="./Artificial Intelligence A-Z_ Download Code Templates - SuperDataScience Pages - Machine Learning _ AI _ Data Science Career _ Analytics _ Success_files/Logo.svg" alt="">
+				</a>
+				<button class="navbar-toggler" type="button">
+					<i class="material-icons">reorder</i>
+				</button>
+				<div class="menu-section navbar-mobile-hide">
+					
+						<div class="menu-option">
+							<a href="https://www.superdatascience.com/paths" class="name">Learning Paths</a>
+						</div>
+					
+						<div class="menu-option">
+							<a href="https://www.superdatascience.com/courses" class="name">Courses</a>
+						</div>
+					
+						<div class="menu-option">
+							<a href="https://www.superdatascience.com/podcast" class="name">Podcasts</a>
+						</div>
+					
+						<div class="menu-option">
+							<a href="https://www.superdatascience.com/blogs" class="name">Blogs</a>
+						</div>
+					
+						<div class="menu-option">
+							<a href="https://www.superdatascience.com/workshops" class="name">Workshops</a>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+
+	<main>
+		
+  
+    
+    
+    
+    
+		
+  
+    
+    
+    
+		<div class="article-header page-header">
+			<div class="valign-wrapper">
+				<div class="content-wrapper">
+					<h2>Artificial Intelligence A-Z™: Download Code Templates </h2>
+
+					
+
+					<div class="author">
+						
+							<div class="thumbnail-container image" style="background-image: url(https://sds-platform-public.s3-us-east-2.amazonaws.com/users/77Rsq4n6ESZFEb4b9/profile-image/Y8vtwyP3pakDgquxw)"> </div>
+							<div class="information">
+								<p>Published by <a href="https://www.superdatascience.com/pages/artificial-intelligence"><strong>SuperDataScience  Team</strong></a></p>
+								<p>Tuesday Dec 04, 2018</p>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="article-body">
+			<div class="article-content">
+				<h2 class="first">Greetings</h2><p>Welcome to the data repository for the Artificial Intelligence course by Hadelin de Ponteves and Kirill Eremenko. The datasets and other supplementary materials are below. Enjoy!</p><hr><h2 class="first">Welcome to the Course!</h2><p>Section 1. Welcome to the course!</p><ul> <li><a href="https://sds-platform-private.s3-us-east-2.amazonaws.com/uploads/P20-Artificial-Intelligence-AZ.zip" target="_blank">Artificial Intelligence A-Z</a> (Folder Structure - Please note this folder is empty)</li></ul><div><p>Please obtain the files in the zips below</p></div><hr><h2 class="first">Part 0: Fundamentals of Reinforcements Learning</h2><p>Additional Reading:</p><ul> <li>Arthur Juliani, 2016, <a href="https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0" target="_blank">Simple&nbsp;Reinforcement Learning with Tensorflow (10 Parts)</a></li><li>Richard Sutton et al.,&nbsp;1998,&nbsp;<a href="http://citeseer.ist.psu.edu/viewdoc/summary?doi=10.1.1.32.7692" target="_blank">Reinforcement Learning I: Introduction</a></li><li>Richard Bellman, 1954,&nbsp;<a href="https://www.rand.org/content/dam/rand/pubs/papers/2008/P550.pdf" target="_blank">The Theory of Dynamic Programming</a></li><li>D. J. White,&nbsp;1993,&nbsp;<a href="http://www.cs.uml.edu/ecg/uploads/AIfall14/MDPApplications3.pdf" target="_blank"><i>A Survey of Applications of Markov Decision Processes</i></a></li><li>Martijn van Otterlo, 2009,&nbsp;<a href="https://pdfs.semanticscholar.org/968b/ab782e52faf0f7957ca0f38b9e9078454afe.pdf" target="_blank">Markov Decision Processes: Concepts and Algorithms</a></li><li>Richard Sutton,&nbsp;1988,&nbsp;<a href="https://link.springer.com/article/10.1007/BF00115009" target="_blank">Learning to Predict by the Methods of Temporal Differences</a></li></ul><hr><h2 class="first">Part 1: Self-Driving Car (Deep Q-Learning)</h2><p>Code Templates:</p><ul> <li><a href="https://sds-platform-private.s3-us-east-2.amazonaws.com/uploads/P20-Self-Driving-Car.zip" target="_blank">Self Driving Car</a></li></ul><p>Additional Reading:</p><ul> <li>Arthur Juliani, 2016,&nbsp;<a href="https://medium.com/@awjuliani/simple-reinforcement-learning-with-tensorflow-part-4-deep-q-networks-and-beyond-8438a3e2b8df" target="_blank">Simple Reinforcement Learning with Tensorflow (Part 4)</a></li><li>Tom Schaul et al., Google DeepMind,&nbsp;2016,&nbsp;<a href="https://arxiv.org/pdf/1511.05952.pdf" target="_blank">Prioritized Experience Replay</a></li><li>Michel Tokic, 2010,&nbsp;<a href="http://tokic.com/www/tokicm/publikationen/papers/AdaptiveEpsilonGreedyExploration.pdf" target="_blank">Adaptive ε-greedy Exploration in Reinforcement Learning Based on Value Differences</a></li></ul><hr><h2 class="first">Part 2: Doom (Deep Convolutional Q-Learning)</h2><p>Code Templates:</p><ul> <li><a href="https://sds-platform-private.s3-us-east-2.amazonaws.com/uploads/P20-Doom.zip" target="_blank">Doom</a></li></ul><p>Additional Reading:</p><ul> <li>Richard S. Sutton and Andrew G. Barto, 1998,&nbsp;<a href="https://mitpress.mit.edu/books/reinforcement-learning" target="_blank">Reinforcement Learning: An Introduction</a></li><li>Volodymyr Mnih et al., 2016,&nbsp;<a href="https://arxiv.org/pdf/1602.01783.pdf" target="_blank">Asynchronous Methods for Deep Reinforcement Learning</a></li></ul><hr><h2 class="first">Part 3: Breakout (Asynchronous Actor-Critic Agents: A3C)</h2><p>Code Templates:</p><ul> <li><a href="https://sds-platform-private.s3-us-east-2.amazonaws.com/uploads/P20-Breakout.zip" target="_blank">Breakout</a></li></ul><p>Additional Reading:</p><ul> <li>Volodymyr Mnih et al, 2016 &nbsp;<a href="https://arxiv.org/pdf/1602.01783.pdf" target="_blank">Asynchronous Methods for Deep Reinforcement Learning</a></li><li>Jaromír Janisch, 2017&nbsp;<a href="https://jaromiru.com/2017/03/26/lets-make-an-a3c-implementation/" target="_blank">Let’s Make An A3c: Implementation</a></li><li>John Schulman et al., 2016&nbsp;<a href="https://arxiv.org/pdf/1506.02438.pdf" target="_blank">High-dimensional Continuous Control Using Generalized Advantage Estimation</a></li><li>Arthur Juliani, 2016 <a href="https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-8-asynchronous-actor-critic-agents-a3c-c88f72a5e9f2" target="_blank">Simple Reinforcement Learning with Tensorflow (Part 8)</a></li></ul><hr><h2 class="first">Artificial Intelligence A-Z Handbook</h2><ul> <li>Hadelin de Ponteves and Kirill Eremenko <a href="https://sds-platform-private.s3-us-east-2.amazonaws.com/uploads/P20-AI-AZ-Handbook-Kickstarter.pdf" target="_blank">Artificial Intelligence A-Z Handbook – Learn How to Build An A.I</a></li></ul>
+
+				<br>
+				<footer class="footer-logged">
+		<div class="all-articles-container">
+			<div class="social-buttons">
+				<a class="social-item" href="https://www.facebook.com/superdatascience">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 127" style="enable-background:new 0 0 127 127;" width="26">
+	<path d="M69.4,57.5c-5.9,0-11.4,0-17.3,0c0,3.2,0,6.1,0,9.1c0,2.7,0.1,5.3,0,8c-0.1,1.8,0.6,2.3,2.3,2.2c4.8-0.1,9.6,0,14.7,0 c0,16.6,0,32.9,0,49.6c-0.9,0-1.7,0-2.6,0c-17,0-34,0-51,0c-9.6,0-15-5.4-15-15c0-31.9,0-63.8,0-95.7c0-9.8,5.4-15.1,15.2-15.1 c31.8,0,63.7,0,95.5,0c10,0,15.3,5.3,15.3,15.3c0,31.9,0,63.8,0,95.7c0,9.4-5.4,14.9-14.9,14.9c-7.4,0-14.8,0-22.4,0 c0-16.6,0-33.1,0-49.7c5.5,0,11,0,16.9,0c0.8-6.4,1.7-12.6,2.5-19.1c-6.5,0-12.8,0-19.8,0c0.3-5.8,0.3-11.3,1-16.8 c0.4-2.9,3.2-4.2,6-4.4c3.2-0.2,6.3-0.1,9.5-0.2c1,0,2,0,3.1,0c0-5.8,0-11.4,0-17.2c-8.6-0.5-17.3-2.1-25.6,1.5 c-8.7,3.7-12.7,11-13.3,20.1C69.2,46.1,69.4,51.6,69.4,57.5z"></path>
+	</svg>
+				</a>
+				<a class="social-item" href="https://www.linkedin.com/company/superdatascience/">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" style="enable-background:new 0 0 126 126;" width="26">
+		<path d="M126.4,126.4c-8.7,0-17.1,0-25.9,0c0-1,0-1.8,0-2.7c0-12.8,0-25.7,0-38.5c0-2.9-0.2-5.8-0.4-8.7c-1-10.3-7.6-15-17.7-12.8 C76,65.1,72,70.2,71.5,78.4c-0.4,8.3-0.4,16.7-0.4,25c-0.1,7.6,0,15.2,0,22.9c-8.7,0-17.2,0-25.8,0c0-27.9,0-55.7,0-83.6 c8.2,0,16.3,0,24.8,0c0,3.6,0,7.2,0,10.8c0.2,0,0.3,0.1,0.5,0.1c0.9-1.2,1.8-2.5,2.8-3.6c6.5-7.5,15.1-10,24.7-9.6 c6.8,0.3,13.2,1.8,18.5,6.4c5.6,4.9,7.8,11.5,8.9,18.5c0.6,3.9,1,7.8,1,11.7c0.1,15.8,0.1,31.7,0.1,47.5 C126.5,125,126.4,125.6,126.4,126.4z"></path>
+		<path d="M28.4,126.4c-8.6,0-17,0-25.6,0c0-27.9,0-55.8,0-83.8c8.5,0,17,0,25.6,0C28.4,70.5,28.4,98.3,28.4,126.4z"></path>
+		<path d="M30.6,15.5c0.1,8.1-6.6,15.3-14.3,15.4C7.7,31,0.7,24.2,0.6,15.8C0.4,7.5,7.1,0.7,15.5,0.6C23.8,0.4,30.6,7.1,30.6,15.5z"></path>
+	</svg>
+				</a>
+				<a class="social-item" href="https://twitter.com/superdatasci">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152 126" style="enable-background:new 0 0 152 126;" width="26">
+		<path d="M9,6.9c17.2,19.7,38.3,30.8,64.7,32.6c-0.1-2.1-0.2-3.8-0.3-5.4C72.9,21,79.6,9.3,91,3.8c11.5-5.6,25.1-3.5,35,4.9 c1.1,1,3.4,1.6,4.8,1.2c5.5-1.7,10.9-3.8,16.5-5.8c-2,6.5-6.3,11.3-11.6,16c2.5-0.5,5-0.9,7.5-1.5c2.6-0.7,5.2-1.5,7.8-2.3 c0.2,0.2,0.5,0.5,0.7,0.7c-4,4-7.8,8.3-12,12c-2.3,2-3.2,3.8-3.2,6.8c-0.3,39.8-25.2,74.4-62.7,85.9c-24.2,7.4-47.9,5.1-70.4-7 c-1.2-0.6-2.3-1.4-3.5-2.5c16.3,0.7,31.1-3.3,44.9-13.5c-14.4-1.6-24.1-8.3-29.1-21.5c4.5-0.2,8.6-0.4,12.7-0.6 C13.6,71.1,5.5,61,4.3,45.4c4.6,1.3,8.8,2.4,13.8,3.9C3.6,31.9,1,19.5,9,6.9z"></path>
+	</svg>
+				</a>
+			</div>
+			<div class="actions">
+				
+					<a href="https://www.superdatascience.com/pages/artificial-intelligence">Privacy Policy</a>
+				
+					<a href="https://www.superdatascience.com/pages/artificial-intelligence">Terms &amp; Conditions</a>
+				
+					<a href="https://www.superdatascience.com/pages/artificial-intelligence">Careers</a>
+				
+					<a href="https://www.superdatascience.com/pages/artificial-intelligence">Contact us</a>
+				
+			</div>
+			<div class="information">
+				<span>© 2021 SuperDataScience</span>
+			</div>
+		</div>
+	</footer>
+			</div>
+			<div class="article-sidebar pull-left hidden-xs"></div>
+			<div class="article-sidebar pull-right hidden-xs"></div>
+		</div>
+	
+  
+  
+	
+  
+  
+	</main>
+
+	<div class="bug-report hidden-xs">
+		<i class="material-icons">live_help</i>
+	</div>
+
+	<div class="status-message-container">
+		
+	</div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
